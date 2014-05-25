@@ -14,7 +14,7 @@ test_data_activity_transformed<-transform(test_data_activity, Activity=ifelse(V1
 train_data_activity_transformed<-transform(train_data_activity, Activity=ifelse(V1==1, "WALKING", ifelse(V1==2, "WALKING_UPSTAIRS",ifelse(V1==3, "WALKING_DOWNSTAIRS",ifelse(V1==4, "SITTING",ifelse(V1==5, "STANDING",ifelse(V1==6, "LAYING", "NO")))))))
 
 ####Getting the feature names 
-features<-read.table("/Users/lakshman/Documents/Coursera/getting_cleaning_data/UCI_HAR_Dataset/features.txt")
+features<-read.table("UCI HAR Dataset/features.txt")
 variables<-features$V2
 
 colnames(test_data)<-variables
